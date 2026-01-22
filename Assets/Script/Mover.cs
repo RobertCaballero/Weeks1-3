@@ -35,7 +35,7 @@ public class Mover : MonoBehaviour
 
         Vector3 screenTransformPosition = gameCamera.WorldToScreenPoint(transform.position);
 
-        xMax = Screen.width;
+        xMax = 5;
 
         xMin = 0;
 
