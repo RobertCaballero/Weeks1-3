@@ -6,10 +6,11 @@ using UnityEngine.Rendering;
 public class PulsingMice : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    public AnimationCurve curve;
-    public float duration;
+    public AnimationCurve curve; //Animation that the sprite will be taking!
+    public float duration = 4; // Based duration
     public float output;
-
+    private float baseDuration = 4f; // Stored copy of the original duration
+    public float increasePulsations = 1f; // New value duration is going to take
     private float progress = 0f;
 
     public bool mouseIsOverMe = false;
@@ -42,11 +43,19 @@ public class PulsingMice : MonoBehaviour
         if (distance < 1f)
         {
             mouseIsOverMe=true;
-            duration = 1f;
      
         }
         else
             mouseIsOverMe=false;
-            
+
+
+        if (mouseIsOverMe)
+        {
+            duration = increasePulsations;
+        }
+        else
+        {
+            duration = baseDuration;
+        }
     }
 }
