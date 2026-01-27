@@ -5,7 +5,7 @@ public class MovingUpAndDownMice : MonoBehaviour
 {
     public float speed2 = 1f; //speed variable to control how fast the object moves
     private float baseSpeed2 = 1f; //stored copy of the original speed
-    private float increaseSpeed2 = 2f; //new value speed is going to take
+    private float increaseSpeed2 = 3f; //new value speed is going to take
     public bool mouseIsOverMe2 = false; //boolean to check if the mouse is over the object
     private float direction2 = 1f; //variable to control the direction of the object
 
@@ -21,15 +21,15 @@ public class MovingUpAndDownMice : MonoBehaviour
         moverXPos.y += speed2 * direction2 * Time.deltaTime; //Make the object move along the x axis taking into account the speed and time per seconds instead of frames
         transform.position = moverXPos;
 
-        if (moverXPos.y > 2f) //If the y position of the object is greater than 2, the speed turns negative making the object move left
+        if (moverXPos.y > -4f) //If the y position of the object is greater than 2, the speed turns negative making the object move left
         {
-            moverXPos.y = 2f; //reset the y position to 2 to avoid going out of bounds
+            moverXPos.y = -4f; //reset the y position to 2 to avoid going out of bounds
             direction2 = -direction2;
         }
 
-        if (moverXPos.y < -2f) // If the y position of the object is less than -2, the speed turns positive making the object move right
+        if (moverXPos.y < -6.5f) // If the y position of the object is less than -2, the speed turns positive making the object move right
         {
-            moverXPos.y = -2f; //reset the y position to -2 to avoid going out of bounds
+            moverXPos.y = -6.5f; //reset the y position to -2 to avoid going out of bounds
             direction2 = -direction2;
         }
 

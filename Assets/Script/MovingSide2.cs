@@ -1,11 +1,11 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class MovingSideMice : MonoBehaviour
+public class MovingSide2 : MonoBehaviour
 {
     public float speed = 1f; //speed variable to control how fast the object moves
     private float baseSpeed = 1f; //stored copy of the original speed
-    private float increaseSpeed = 3f; //new value speed is going to take
+    private float increaseSpeed = 2f; //new value speed is going to take
     public bool mouseIsOverMe = false; //boolean to check if the mouse is over the object
     private float direction = 1f; //variable to control the direction of the object
 
@@ -21,15 +21,15 @@ public class MovingSideMice : MonoBehaviour
         moverXPos.x += speed * direction * Time.deltaTime; //Make the object move along the x axis taking into account the speed and time per seconds instead of frames
         transform.position = moverXPos;
 
-        if (moverXPos.x > 2.3f) //If the x position of the object is greater than 5, the speed turns negative making the object move left
+        if (moverXPos.x > -5.2f) //If the x position of the object is greater than 5, the speed turns negative making the object move left
         {
-            moverXPos.x = 2.3f; //reset the x position to 5 to avoid going out of bounds
+            moverXPos.x = -5.2f; //reset the x position to 5 to avoid going out of bounds
             direction = -direction;
         }
 
-        if (moverXPos.x < 0f) // If the x position of the object is less than 0, the speed turns positive making the object move right
+        if (moverXPos.x < -7f) // If the x position of the object is less than 0, the speed turns positive making the object move right
         {
-            moverXPos.x = 0f; //reset the x position to 0 to avoid going out of bounds
+            moverXPos.x = -7f; //reset the x position to 0 to avoid going out of bounds
             direction = -direction;
         }
 

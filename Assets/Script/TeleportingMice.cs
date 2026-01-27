@@ -32,7 +32,7 @@ public class TeleportingMice : MonoBehaviour
        
         if (mouseIsOverMe3)
         {
-            transform.position = Random.insideUnitSphere * 5;
+            transform.position = Random.insideUnitSphere * 10;
 
         }
     }
