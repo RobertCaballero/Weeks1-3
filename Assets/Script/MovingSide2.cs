@@ -5,7 +5,7 @@ public class MovingSide2 : MonoBehaviour
 {
     public float speed = 1f; //speed variable to control how fast the object moves
     private float baseSpeed = 1f; //stored copy of the original speed
-    private float increaseSpeed = 2f; //new value speed is going to take
+    private float increaseSpeed = 3f; //new value speed is going to take
     public bool mouseIsOverMe = false; //boolean to check if the mouse is over the object
     private float direction = 1f; //variable to control the direction of the object
 
