@@ -26,12 +26,12 @@ public class PulsingMice : MonoBehaviour
     {
        
             progress += Time.deltaTime / duration;
-            output = curve.Evaluate(progress);
+            output = curve.Evaluate(progress); // Evaluate the curve based on progress
 
-            transform.localScale = Vector3.one * output;
+        transform.localScale = Vector3.one * output; // Local scale of the object is based on the output of the curve. Making it increase and decrease in size!
 
 
-            if (progress > 1f)
+        if (progress > 1f)
             {
                 progress = 0f;
             }

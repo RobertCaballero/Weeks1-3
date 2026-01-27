@@ -6,7 +6,7 @@ public class Pulser : MonoBehaviour
     public AnimationCurve curve;
     public float duration;
     public float output;
-
+    public Vector3 testing;
 
     private float progress = 0f;
 
@@ -25,7 +25,9 @@ public class Pulser : MonoBehaviour
         output = curve.Evaluate(progress);
 
 
-        transform.localScale = Vector3.one * output;
+        transform.localScale = testing;
+
+        //transform.localScale = Vector3.one * output;
 
 
         if(progress > 1f)
