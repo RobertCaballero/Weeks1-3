@@ -5,7 +5,7 @@ public class MovingUpAndDownMice : MonoBehaviour
 {
     public float speed2 = 1f; //speed variable to control how fast the object moves
     private float baseSpeed2 = 1f; //stored copy of the original speed
-    private float increaseSpeed2 = 3f; //new value speed is going to take
+    private float increaseSpeed2 = 4f; //new value speed is going to take
     public bool mouseIsOverMe2 = false; //boolean to check if the mouse is over the object
     private float direction2 = 1f; //variable to control the direction of the object
 
